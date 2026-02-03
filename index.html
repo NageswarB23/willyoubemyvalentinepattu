@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Pattuma</title>
+    <style>
+        body {
+            background-color: #ffe4e1; /* Misty Rose (Soft Pink) */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            color: #d11d53;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(209, 29, 83, 0.2);
+            border: 2px solid #ffb6c1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .piggy-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ffb6c1;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #yesBtn {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+            background-color: #ff1493;
+        }
+
+        #noBtn {
+            background-color: #e0e0e0;
+            color: #757575;
+            position: relative;
+        }
+
+        /* The Magic: Hide on hover */
+        #noBtn:hover {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .success-msg {
+            display: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff1493;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.pinimg.com/originals/82/53/5b/82535b719001323f4955776d5e1657c7.jpg" alt="Cute Pig" class="piggy-photo">
+        
+        <h1>Will you be my valentine Pattuma? 💖</h1>
+
+        <div class="buttons">
+            <button id="yesBtn" onclick="celebrate()">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+
+        <div id="message" class="success-msg">
+            Yay! See you on Valentine's Day! 🐷💕
+        </div>
+    </div>
+
+    <script>
+        function celebrate() {
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('noBtn').style.display = 'none';
+            // Optional: add some confetti or alert
+            alert("Best decision ever! Love you Pattuma! ❤️");
+        }
+    </script>
+
+</body>
+</html>
